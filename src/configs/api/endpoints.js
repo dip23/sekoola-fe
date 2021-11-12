@@ -1,5 +1,5 @@
 // const baseUrl = 'http://localhost:3001';
-const baseUrl = 'http://sekoola-backend.herokuapp.com'
+const baseUrl = 'https://sekoola-backend.herokuapp.com'
 
 export const loginApi = `${baseUrl}/user/login`;
 export const registSekolahApi = `${baseUrl}/user/register/sekolah`; // admin sekolah
