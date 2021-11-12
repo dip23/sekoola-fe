@@ -17,45 +17,44 @@ export default function DaftarGuru() {
   const [dataGuruZ, setDataGuru] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const id = searchParams.get('id');
-  console.log(dataGuruZ);
+  const id = parseInt(searchParams.get('id'));
 
   const column = [
-    { heading: 'Nama Guru', value: 'nama' },
-    { heading: 'NIP', value: 'nip' },
+    { heading: 'Nama Guru', value: 'name' },
+    { heading: 'NIP', value: 'NIP' },
     { heading: 'Email', value: 'email' },
   ];
 
-  // Temp data
-  const dataGuru = [
-    {
-      id: '1',
-      nama: 'Difa Bagasputra M',
-      nip: '198700',
-      email: 'adif.maulana@gmail.com',
-    },
-    {
-      id: '2',
-      nama: 'Nazmi Abkary',
-      nip: '198700',
-      email: 'adif.maulana@gmail.com',
-    },
-    {
-      id: '3',
-      nama: 'Rahma Batari',
-      nip: '198700',
-      email: 'adif.maulana@gmail.com',
-    },
-    { id: '4', nama: 'Adi', nip: '198700', email: 'adif.maulana@gmail.com' },
-    { id: '5', nama: 'Rep', nip: '198700', email: 'adif.maulana@gmail.com' },
-    {
-      id: '6',
-      nama: 'Siapa aja',
-      nip: '198700',
-      email: 'adif.maulana@gmail.com',
-    },
-  ];
-  // End of Temp Data
+  // // Temp data
+  // const dataGuru = [
+  //   {
+  //     id: '1',
+  //     nama: 'Difa Bagasputra M',
+  //     nip: '198700',
+  //     email: 'adif.maulana@gmail.com',
+  //   },
+  //   {
+  //     id: '2',
+  //     nama: 'Nazmi Abkary',
+  //     nip: '198700',
+  //     email: 'adif.maulana@gmail.com',
+  //   },
+  //   {
+  //     id: '3',
+  //     nama: 'Rahma Batari',
+  //     nip: '198700',
+  //     email: 'adif.maulana@gmail.com',
+  //   },
+  //   { id: '4', nama: 'Adi', nip: '198700', email: 'adif.maulana@gmail.com' },
+  //   { id: '5', nama: 'Rep', nip: '198700', email: 'adif.maulana@gmail.com' },
+  //   {
+  //     id: '6',
+  //     nama: 'Siapa aja',
+  //     nip: '198700',
+  //     email: 'adif.maulana@gmail.com',
+  //   },
+  // ];
+  // // End of Temp Data
 
   const handleClickTableRow = (item) =>
     history.push(routes.DETAIL_GURU(item.id));
@@ -96,10 +95,12 @@ export default function DaftarGuru() {
     return () => source.cancel();
   }, []);
 
-  const detailDataGuru = dataGuru && dataGuru.filter((data) => data.id === id);
+  const detailDataGuru = dataGuruZ && dataGuruZ.filter((data) => data.id === id);
+
+  console.log(detailDataGuru)
 
   if (location.search === `?id=${id}`) {
-    return <DetailGuru data={detailDataGuru[0]} />;
+    return <DetailGuru />;
   }
 
   return (
@@ -108,7 +109,7 @@ export default function DaftarGuru() {
         <Table
           clickable
           column={column}
-          data={dataGuru}
+          data={dataGuruZ}
           editable
           onClick={(e) => handleClickTableRow(e)}
           loading={loading}

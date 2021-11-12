@@ -82,9 +82,9 @@ export default function DetailGuru(props) {
       </div>
       <div className={styles.header}>
         <div>
-          <p>{data.nama}</p>
-          <p>{data.nip}</p>
-          <p>{data.email}</p>
+          <p>{data && data.name}</p>
+          <p>{data && data.profile.nip}</p>
+          <p>{data && data.email}</p>
         </div>
         <div>
           {buttonHeader.map((i, idx) => (
@@ -127,7 +127,7 @@ export default function DetailGuru(props) {
       <ModalAddMatpel
         onClose={() => setShowModalMatpel(false)}
         show={showModalMatpel}
-        placeholder={data.nama}
+        placeholder={data && data.name}
       />
     </div>
   );

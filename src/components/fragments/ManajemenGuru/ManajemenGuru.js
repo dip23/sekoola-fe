@@ -119,7 +119,6 @@ function ManajemenGuru() {
       email,
       password: 'password',
       NIP: nip,
-      schoolId: 1,
     };
 
     setPostLoading(true);
