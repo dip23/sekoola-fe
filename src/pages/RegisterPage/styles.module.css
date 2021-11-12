@@ -1,0 +1,83 @@
+.root {
+  display: flex;
+  min-height: 100vh;
+  color: var(--dark-blue);
+}
+
+.leftSide,
+.rightSide {
+  flex: 1;
+}
+
+/* Left Side Display */
+.leftSide {
+  background-color: var(--cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+
+.leftSide::after {
+  content: "";
+  background-color: tomato;
+  width: 100%;
+  height: 5.3125rem;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.leftSide>img:first-child {
+  width: 60%;
+  /* width: 25.375rem; */
+  /* height: 9.5625rem; */
+}
+
+.leftSide>img:last-child {
+  width: 60%;
+  /* width: 30.5rem; */
+  /* height: 40.875rem; */
+}
+
+/* Right Side Display */
+.rightSide>div {
+  width: 55%;
+  margin: 6rem auto auto;
+}
+
+.rightSide>div>h1 {
+  font-weight: 700;
+  margin-bottom: 2.75rem;
+}
+
+.rightSide>div>h1>span {
+  color: var(--yellow);
+}
+
+.rightSide>div>form>div {
+  margin-bottom: 1.5rem;
+}
+
+.rightSide>div>form>button {
+  margin-top: 1rem;
+}
+
+.rightSide>div>form>p:last-child {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 4.4rem;
+}
+
+.rightSide>div>form>p:last-child>a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.rightSide>div>form>p:last-child>a:hover {
+  text-decoration: underline;
+}

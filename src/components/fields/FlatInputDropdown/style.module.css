@@ -1,0 +1,46 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 2.3rem 3fr;
+  align-items: center;
+}
+
+.root>label,
+.root>span {
+  font-size: 1.125rem;
+  color: var(--dark-blue);
+}
+
+.root>select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  color: var(--dark-blue);
+  border-radius: 10px;
+  border: 1px solid var(--grey-border);
+  transition: .2s all;
+  cursor: pointer;
+
+  background-image: url('../../../assets/dropdown-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100%) center;
+  background-size: 45px;
+  appearance: none;
+  /* Firefox */
+  -moz-appearance: none;
+  /* Safari and Chrome */
+  -webkit-appearance: none;
+}
+
+.root>select>option {
+  border-radius: 10px;
+}
+
+.root>select>option:disabled {
+  color: var(--grey-border);
+}
+
+.root>select:focus {
+  outline: none;
+  border: 1px solid var(--yellow);
+  box-shadow: 0 0 3px var(--yellow);
+}

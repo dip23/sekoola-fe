@@ -1,0 +1,57 @@
+.root {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  width: auto;
+  height: max-content;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+}
+
+.root>section:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.root>section:first-child>h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.rootButton {
+  color: var(--dark-blue);
+}
+
+.content {
+  margin-top: 2.25rem;
+}
+
+.content>div:last-child {
+  margin-top: 2rem;
+}
+
+.tabControl {
+  display: flex;
+  border-bottom: 0.0625rem solid var(--grey);
+}
+
+.tabControl>button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: 1.25rem;
+  color: var(--dark-blue);
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: 1.5rem;
+}
+
+.tabControl>button.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+.tabControl>button.inactive {
+  padding-left: 1rem;
+  border-bottom: 2px solid transparent;
+}

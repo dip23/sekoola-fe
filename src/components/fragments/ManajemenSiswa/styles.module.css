@@ -1,0 +1,33 @@
+.root>form>div {
+  display: flex;
+}
+
+.leftSide,
+.rightSide {
+  flex: 1;
+}
+
+.leftSide>.secondInput {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.root>form>div:last-child {
+  padding-top: 2.5rem;
+}
+
+.leftSide>button {
+  margin-top: 1.5rem;
+}
+
+.leftSide>a {
+  color: var(--dark-blue);
+  font-size: 1.125rem;
+  font-weight: bold;
+  float: right;
+  transition: .3s all;
+}
+
+.leftSide>a:hover {
+  text-decoration-thickness: 2px;
+}

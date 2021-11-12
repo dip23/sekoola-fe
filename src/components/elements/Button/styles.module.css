@@ -1,0 +1,47 @@
+.root {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--white);
+  transition: .2s all;
+}
+
+.blockBtn {
+  width: 100%;
+}
+
+.yellow {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
+.yellow:hover {
+  color: var(--yellow);
+  background-color: var(--white);
+}
+
+.blue {
+  background-color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+}
+
+.blue:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+}
+
+.smallBtn {
+  font-size: 1.125rem;
+  padding: 0.625rem 2.1rem;
+  font-weight: bold;
+}
+
+.root:disabled {
+  color: var(--white);
+  background-color: var(--grey);
+  border: 1px solid var(--grey);
+  pointer-events: none;
+}

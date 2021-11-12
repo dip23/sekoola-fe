@@ -1,0 +1,201 @@
+.aside {
+  background-color: var(--white-base);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 19rem;
+  display: flex;
+}
+
+.aside>aside {
+  background-color: var(--yellow);
+  height: 100%;
+  padding: 1.5rem 1rem;
+  position: relative;
+  text-align: center;
+  width: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside>aside>div {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.aside>aside>div:last-child {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1.5rem;
+}
+
+.aside>aside>div:last-child>i {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.aside>aside>div:last-child>i:hover {
+  filter: opacity(.7);
+}
+
+.aside>aside>div>img {
+  width: inherit;
+}
+
+.navContainer {
+  padding: 1.5rem 1rem;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile>div:first-child {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.profile>div:first-child>img {
+  width: inherit;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profile>div:last-child>p:first-child {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.profile>div:last-child>p:last-child {
+  font-size: 0.75rem;
+  color: var(--dark-blue);
+}
+
+/* Nav Item */
+.navItem {
+  margin-top: 2rem;
+}
+
+.navItem>a {
+  text-decoration: none;
+  transition: .2s all;
+}
+
+.navItem>a>div {
+  padding: 1rem 0.5rem;
+  display: flex;
+  position: relative;
+  transition: inherit;
+}
+
+.navItem>a>div>svg {
+  color: var(--dark-blue);
+  transition: inherit;
+}
+
+.navItem>a>div>p {
+  color: var(--dark-blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  transition: inherit;
+}
+
+.navItem>a>div>i {
+  position: absolute;
+  right: .75rem;
+  top: .75rem;
+  font-size: 1.5rem;
+  color: var(--grey-dropdown);
+}
+
+/* Nav Tingkatan */
+.navItem>.tingkatanContainer {
+  margin-top: .5rem;
+  opacity: 0;
+  transition: .2s all;
+}
+
+.navItem>.tingkatanContainer>div {
+  list-style-type: none;
+  margin-left: 1.375rem;
+  padding-left: .25rem;
+  border-left: 3px solid var(--dark-blue);
+}
+
+.navItem>.tingkatanContainer>div>a {
+  padding: .5rem;
+  padding-left: .75rem;
+  font-size: 0.875rem;
+  color: var(--dark-blue);
+  text-decoration: none;
+  display: block;
+  border-radius: 0.625rem;
+  width: 100%;
+  transition: .2s all;
+}
+
+.navItem>.tingkatanContainer>div>a:hover {
+  background-color: var(--grey);
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+
+.navItem>.tingkatanContainer.dNone {
+  display: none;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: .2s all;
+}
+
+.navItem>.tingkatanContainer.dBlock {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: .2s all;
+}
+
+/* Active for Nav Item */
+.active>div {
+  background-color: var(--grey);
+  border-radius: 0.625rem;
+}
+
+.active>div>p,
+.active>div>svg {
+  color: var(--yellow) !important;
+  font-weight: 700;
+}
+
+/* Active for Tingkatan Kelas */
+a.activeSubNav {
+  background-color: var(--grey);
+}
+
+a.activeSubNav {
+  color: var(--yellow) !important;
+  font-weight: 700;
+}
+
+/* End of Nav Item */
+
+.main {
+  margin-left: 19rem;
+  padding: 2rem 2.5rem;
+}
+
+/* loading spinner */
+.spinner {
+  width: 25px;
+  margin: auto;
+}
+
+.spinner img {
+  width: 100%;
+}

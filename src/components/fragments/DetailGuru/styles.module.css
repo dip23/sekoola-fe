@@ -1,0 +1,58 @@
+p{
+  color: var(--dark-blue);
+}
+
+.breadCrumb{
+  margin-bottom: 3rem;
+}
+
+.breadCrumb > p {
+  color: var(--dark-blue);
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header > div:first-child {
+  margin-bottom: 2.25rem;
+}
+
+.header > div:first-child > p:first-child {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.header > div:first-child > p:nth-child(2){
+  margin-bottom: 1rem;
+}
+
+.header > div:first-child > p:not(:first-child) {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.header > div:last-child > button:not(:last-child){
+  margin-right: 1rem;
+}
+
+.buttonHeader {
+  padding: 0.5rem;
+  color: var(--dark-blue);
+}
+
+.buttonHeader > svg {
+  width: 1.5rem !important;
+  height: 1.5rem;
+}
+
+.daftarNilai > section:first-child > h1 {
+  font-size: 1.5rem;
+}

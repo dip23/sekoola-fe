@@ -1,0 +1,22 @@
+.root {
+  font-size: 1.25rem;
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto 1rem;
+}
+
+.root.success {
+  color: var(--text-success);
+  background-color: var(--success);
+}
+
+.root.warning {
+  color: var(--text-warning);
+  background-color: var(--warning);
+}
+
+.root.danger {
+  color: var(--text-danger);
+  background-color: var(--danger);
+}

@@ -1,0 +1,24 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 2.3rem 3fr;
+  align-items: center;
+}
+
+.root>label,
+.root>span {
+  font-size: 1.125rem;
+  color: var(--dark-blue);
+}
+
+.root > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.root > div:last-child > div {
+  display: flex;
+}
+
+.root > div:last-child > :not(:last-child){
+  margin-right: 1rem;
+}

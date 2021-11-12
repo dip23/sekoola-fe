@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+}
+
+.leftSide {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.leftSide>h2 {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+  margin-bottom: 1.125rem;
+}
+
+.leftSide>h2:first-child {
+  margin-top: -1rem;
+}
+
+.leftSide>hr {
+  margin: 1.4375rem 0;
+}
+
+.leftSide>form>div {
+  margin-bottom: 2rem;
+}
+
+.rightSide {
+  flex: 1.8;
+}

@@ -1,0 +1,12 @@
+.root>form>div {
+  margin-bottom: 2rem;
+}
+
+.root>form>div>select,
+.root>form>div>input {
+  width: 60%;
+}
+
+.root>form>div:nth-child(2) {
+  margin-bottom: 4rem;
+}

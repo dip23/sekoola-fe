@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+}
+
+.leftSide,
+.rightSide {
+  flex: 1;
+}
+
+.leftSide {
+  padding-right: 2rem;
+}
+
+.leftSide>form>div>label,
+.leftSide>form>div>span {
+  margin-top: .6rem;
+}
+
+.leftSide>form>div:nth-child(2) {
+  margin-top: 2rem;
+  margin-bottom: 6.25rem;
+}

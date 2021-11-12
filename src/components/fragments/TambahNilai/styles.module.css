@@ -1,0 +1,8 @@
+.form > div:not(:last-child){
+  margin-bottom: 1.5rem;
+}
+
+.form > div > input,
+.form > div > select{
+  width: 23.5rem;
+}

@@ -1,0 +1,130 @@
+.root > h1{
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  color: var(--dark-blue);
+  margin-bottom: 2rem;
+}
+.root > div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 43.5rem;
+}
+
+.left > div {
+  padding: 1.375rem 1.25rem;
+  min-height: 23.125rem;
+  background-color: var(--white-base);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.625rem;
+}
+
+.left > div:first-child {
+  margin-bottom: 2.125rem;
+}
+
+.right {
+  width: 17.9375rem;
+}
+
+.right > div:first-child {
+  min-height: 18.75rem;
+  margin-bottom: 1.75rem;
+  background-color: var(--white-base);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right > div:last-child {
+  min-height: 27.1875rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--white-base);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.625rem;
+}
+
+.right > div:last-child > p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--dark-blue);
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 8.375rem;
+  height: 8.375rem; 
+  margin-top: 2.5rem;
+}
+
+.profileImage > img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+}
+
+.profileDesc {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.profileDesc > p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.profileDesc > p:last-child{
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.cardDataContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardDataContainer:nth-of-type(1) {
+  margin-bottom: 1.375rem;
+}
+
+.cardData{
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  width: 7.5rem;
+  height: 9.6875rem;
+  border-radius: 0.625rem;
+  border: 0.125rem solid var(--dark-blue);
+  background-color: #FBFBFB;
+}
+
+.cardData:first-child {
+  margin-right: 1rem;
+}
+
+.cardData > p:first-child {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.cardData > p:last-child {
+  margin-top: 1.5rem;
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.chart > p{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 3.125rem;
+}

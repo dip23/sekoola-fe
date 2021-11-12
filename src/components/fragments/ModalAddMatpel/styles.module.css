@@ -1,0 +1,61 @@
+.modalMatpel > div:first-child {
+  width: 28.5625rem;
+}
+.formMatpel > div:nth-child(2){
+  display: flex;
+  justify-content: space-between;
+}
+
+.formMatpel > div:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.InputField > label{
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.timeInput {
+  display: block;
+  width: 100%;
+}
+
+.timeInput > label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+.timeInput > span {
+  display: none;
+}
+
+.timeInput > div:last-child{
+  margin-top: 1rem;
+}
+
+.dropDown {
+  display: block;
+}
+
+.dropDown > label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+.dropDown > span {
+  display: none;
+}
+
+.dropDown > select {
+  margin-top: 1rem;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+}

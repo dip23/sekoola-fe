@@ -1,0 +1,51 @@
+.rootModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.modalContent {
+  width: 37.5rem;
+  background-color: var(--white-base);
+  border-radius: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.modalHeader {
+  padding: 1.5rem 2rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalHeader > h4 {
+  font-size: 1.5rem;
+}
+
+.centerHeader  {
+  justify-content: center;
+}
+
+.modalBody {
+  padding: 2rem;
+}
+
+.buttonClose {
+  padding: 0;
+  background-color: transparent;
+}
+
+.buttonClose:hover {
+  background-color: transparent;
+  color: var(--white);
+}

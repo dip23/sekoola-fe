@@ -1,0 +1,34 @@
+.modalKelas form>div:first-child {
+  display: flex;
+  margin-bottom: 2.25rem;
+  justify-content: space-between;
+}
+
+.modalKelas>div>div:nth-child(2)>div:first-child>div:not(:last-child) {
+  margin-right: 2.875rem;
+}
+
+.inputModal>label {
+  color: var(--dark-blue);
+}
+
+.counterInput {
+  display: block;
+}
+
+.counterInput>label {
+  font-weight: bold;
+}
+
+.counterInput>span {
+  display: none;
+}
+
+.counterInput>div:last-child {
+  margin-top: 1rem;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,46 @@
+.modalSiswa > div:first-child {
+  width: 28.5625rem;
+}
+
+.formSiswa > div:first-child{
+  display: flex;
+  justify-content: space-between;
+}
+
+.formSiswa > div:first-child > div:first-child {
+  margin-right: 2.5rem;
+}
+
+.formSiswa > div:not(:last-child){
+  margin-bottom: 1.5rem;
+}
+
+.InputField > label{
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.dropDownNama {
+  display: block;
+}
+
+.dropDownNama > label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
+
+.dropDownNama > span {
+  display: none;
+}
+
+.dropDownNama > select {
+  margin-top: 1rem;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+}

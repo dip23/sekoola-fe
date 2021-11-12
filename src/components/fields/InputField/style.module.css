@@ -1,0 +1,54 @@
+.root {
+  font-size: 1.5rem;
+  font-weight: 400;
+  position: relative;
+}
+
+.root>label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.root>input {
+  width: 100%;
+  padding: 0.875rem 1.875rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 10px;
+  border: 1px solid var(--grey-border);
+  transition: .2s all;
+}
+
+.root>input::-webkit-input-placeholder {
+  color: var(--grey-border);
+}
+
+.root>input:focus {
+  outline: none;
+  border: 1px solid var(--yellow);
+  box-shadow: 0 0 3px var(--yellow);
+}
+
+.root>i {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.root>i:hover {
+  color: var(--yellow)
+}
+
+.smallField {
+  font-size: 1.125rem;
+}
+
+.root.smallField>label {
+  font-weight: bold;
+}
+
+.root.smallField>input {
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+}

@@ -1,0 +1,30 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 2.3rem 3fr;
+  align-items: center;
+}
+
+.root>label,
+.root>span {
+  font-size: 1.125rem;
+  color: var(--dark-blue);
+}
+
+.root>input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  border-radius: 10px;
+  border: 1px solid var(--grey-border);
+  transition: .2s all;
+}
+
+.root>input::-webkit-input-placeholder {
+  color: var(--grey-border);
+}
+
+.root>input:focus {
+  outline: none;
+  border: 1px solid var(--yellow);
+  box-shadow: 0 0 3px var(--yellow);
+}

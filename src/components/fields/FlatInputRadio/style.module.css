@@ -1,0 +1,28 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 2.3rem 3fr;
+}
+
+.root>label,
+.root>span {
+  font-size: 1.125rem;
+  color: var(--dark-blue);
+}
+
+.root>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.root>div>label {
+  padding: 0.5rem 0;
+  color: var(--dark-blue);
+  font-size: 1.125rem;
+  transition: .2s all;
+}
+
+.root>div>label>input {
+  margin-right: 0.8rem;
+  background-color: var(--grey-f9);
+  width: 1.25rem;
+}

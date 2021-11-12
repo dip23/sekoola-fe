@@ -1,0 +1,17 @@
+.modalEdit > div{
+  width: 27.25rem;
+}
+
+.inputText:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.inputText > label {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+}
