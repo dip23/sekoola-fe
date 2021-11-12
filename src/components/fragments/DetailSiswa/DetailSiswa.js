@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
 import {
@@ -8,13 +8,61 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ContainerPages, ModalDelete, ModalEdit, Table } from '..';
 import { Button, Modal } from '../../elements';
+import axios from 'axios';
+import { useSelector } from 'react-redux';
+import { useLocation, useParams } from 'react-router';
+import { studentPageApi } from '../../../configs';
 
-export default function DetailSiswa(props) {
-  const { data } = props;
+export default function DetailSiswa() {
 
+  const [data, setData] = useState([]);
+  const { idTingkatan } = useParams();
   const [showModalEdit, setShowModalEdit] = useState(false);
   const [showModalDelete, setShowModalDelete] = useState(false);
   const [showModalShare, setShowModalShare] = useState(false);
+  const jwtToken = useSelector((state) => state.auth.userData.token);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+
+  const id = parseInt(searchParams.get('siswa'));
+
+  useEffect(() => {
+    const source = axios.CancelToken.source();
+
+    const loadData = async () => {
+      try {
+        const response = await axios.get(`${studentPageApi}/${idTingkatan}`, {
+          headers: {
+            'Content-Type': 'application/json',
+            auth: jwtToken,
+          },
+          cancelToken: source.token,
+        });
+        const dataResponse = response.data.content.students;
+        setData(dataResponse);
+      } catch (error) {
+        if (axios.isCancel(error)) {
+          console.log('fetch aborted.');
+        } else {
+          console.log(error.message);
+          console.log(error.res);
+        }
+      }
+    };
+    loadData();
+
+    // Cancel request
+    return () => source.cancel();
+  }, [])
+
+  // useEffect(() => {
+  //   const detailSiswa = data && data.filter((data) => data.id === id);
+  //   setdetailDataSiswa(detailSiswa)
+  // }, [data])
+
+  const detailSiswa = data && data.filter((data) => data.id === id);
+
+  console.log(detailSiswa)
 
   const column = [
     { heading: 'Mata Pelajaran', value: 'matpel' },
@@ -46,12 +94,12 @@ export default function DetailSiswa(props) {
   return (
     <div className={styles.rootDetailSiswa}>
       <div className={styles.breadCrumb}>
-        <p>{'Data Kelas & Siswa > Kelas 1 A > Difa Bagas'}</p>
+        <p>{`Data Kelas & Siswa > Kelas 1 A > ${detailSiswa[0]?.name}`}</p>
       </div>
       <div className={styles.header}>
         <div>
-          <p>{(data && data.name) || `Adipati Ma'ruf Alamsyah`}</p>
-          <p>NISN : {(data && data.NISN) || `9983974127`}</p>
+          <p>{(detailSiswa[0]?.name) || `Siswa`}</p>
+          <p>NISN : {(detailSiswa[0]?.NISN) || `NISN`}</p>
         </div>
         <div>
           {buttonHeader.map((i, idx) => (
